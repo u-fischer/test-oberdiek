@@ -3,7 +3,7 @@
 module   = "test-oberdiek"
 ctanpkg  = ""
 
-checkconfigs = {"build","config-plain"}
+checkconfigs = {"build","config-plain", "config-noxetex"}
 checkruns = 2
 
 sourcefiledir = "./source"
