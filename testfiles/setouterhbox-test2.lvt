@@ -1,0 +1,37 @@
+%% This is file `setouterhbox-test2.lvt',
+%% The original source files were:
+%%
+%% setouterhbox.dtx  (with options: `test2')
+\nofiles
+\input{regression-test}
+\documentclass[a5paper]{article}
+\usepackage{url}[2005/06/27]
+\usepackage{setouterhbox}
+
+\newsavebox{\testbox}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2em}
+
+\begin{document}\START \showoutput
+\raggedright
+
+\url{http://this.is.a.very.long.host.name/followed/%
+by/a/very_long_long_long_path.html}%
+
+\sbox\testbox{%
+  \url{http://this.is.a.very.long.host.name/followed/%
+  by/a/very_long_long_long_path.html}%
+}%
+\unhbox\testbox
+
+\begin{setouterhbox}{\testbox}%
+  \url{http://this.is.a.very.long.host.name/followed/%
+  by/a/very_long_long_long_path.html}%
+\end{setouterhbox}
+\unhbox\testbox
+
+\end{document}
+\endinput
+%%
+%% End of file `setouterhbox-test2.tex'.
