@@ -1,0 +1,35 @@
+%% This is file `eolgrab-test2.lvt',
+%% The original source files were:
+%%
+%% eolgrab.dtx  (with options: `test2')
+\input{regression-test}
+\input eolgrab.sty\relax
+\catcode`\{=1 %
+\catcode`\}=2 %
+\eolgrab{\immediate\write16}Hello World
+\def\TestExpected{foo bar}
+\eolgrab{\def\TestResult}foo bar
+\START
+\ifx\TestExpected\TestResult
+  \immediate\write16{* Ok (foo bar)}%
+\else
+  \errmessage{Test failed (foo bar)}%
+\fi
+
+\begingroup
+  \def\TestExpected{foobar}%
+  \endlinechar=-1 %
+  \eolgrab{\def\TestResult}foo
+  bar
+  ^^M
+  \ifx\TestExpected\TestResult
+    \immediate\write16{* Ok (foobar)}%
+  \else
+    \errmessage{Test failed (foobar)}%
+  \fi
+\endgroup
+
+\csname @@end\endcsname\end
+\endinput
+%%
+%% End of file `eolgrab-test2.tex'.
