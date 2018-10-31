@@ -3,7 +3,6 @@
 %%
 %% pagegrid.dtx  (with options: `test1')
 \input{regression-test}
-\START
 \catcode`\{=1 %
 \catcode`\}=2 %
 \catcode`\#=6 %
@@ -98,6 +97,7 @@
   \RangeCatcodeCheck{123}{255}{15}%
   \RestoreCatcodes
 }
+\START
 \Test
 \csname @@end\endcsname
 \end
