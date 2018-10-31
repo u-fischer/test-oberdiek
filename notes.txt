@@ -1,0 +1,9 @@
+luatex obsolete?
+thepdfnumber -> expl3
+magicnum?
+
+listingsutf8: test3-5 empty
+
+kvsetkeys-test3: removed (undefines \unexpanded)
+
+intcalc: everything in expl3?
