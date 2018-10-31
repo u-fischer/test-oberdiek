@@ -1,19 +1,19 @@
-%%
-%% This is file `pdftexcmds-test1.tex',
+%% Fails because of invalid char (> in ifpdf)
+%% This is file `pdfcol-test1.tex',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
 %%
-%% pdftexcmds.dtx  (with options: `test1')
-%% 
+%% pdfcol.dtx  (with options: `test1')
+%%
 %% This is a generated file.
-%% 
-%% Project: pdftexcmds
-%% Version: 2018/09/10 v0.29
-%% 
-%% Copyright (C) 2007, 2009-2011 by
+%%
+%% Project: pdfcol
+%% Version: 2016/05/17 v1.4
+%%
+%% Copyright (C) 2007 by
 %%    Heiko Oberdiek <heiko.oberdiek at googlemail.com>
-%% 
+%%
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either
 %% version 1.3c of this license or (at your option) any later
@@ -23,21 +23,19 @@
 %%    http://www.latex-project.org/lppl.txt
 %% and version 1.3 or later is part of all distributions of
 %% LaTeX version 2005/12/01 or later.
-%% 
+%%
 %% This work has the LPPL maintenance status "maintained".
-%% 
+%%
 %% This Current Maintainer of this work is Heiko Oberdiek.
-%% 
+%%
 %% The Base Interpreter refers to any `TeX-Format',
 %% because some files are installed in TDS:tex/generic//.
-%% 
-%% This work consists of the main source file pdftexcmds.dtx
+%%
+%% This work consists of the main source file pdfcol.dtx
 %% and the derived files
-%%    pdftexcmds.sty, pdftexcmds.pdf, pdftexcmds.ins, pdftexcmds.drv,
-%%    pdftexcmds.bib, pdftexcmds-test1.tex, pdftexcmds-test2.tex,
-%%    pdftexcmds-test-shell.tex, pdftexcmds-test-escape.tex,
-%%    oberdiek.pdftexcmds.lua, pdftexcmds.lua.
-%% 
+%%    pdfcol.sty, pdfcol.pdf, pdfcol.ins, pdfcol.drv, pdfcol-test1.tex,
+%%    pdfcol-test2.tex, pdfcol-test3.tex, pdfcol-test4.tex.
+%%
 \catcode`\{=1 %
 \catcode`\}=2 %
 \catcode`\#=6 %
@@ -107,7 +105,7 @@
 }
 \def\space{ }
 \expandafter\ifx\csname LoadCommand\endcsname\relax
-  \def\LoadCommand{\input pdftexcmds.sty\relax}%
+  \def\LoadCommand{\input pdfcol.sty\relax}%
 \fi
 \def\Test{%
   \RangeCatcodeInvalid{0}{47}%
@@ -137,4 +135,4 @@
 \end
 \endinput
 %%
-%% End of file `pdftexcmds-test1.tex'.
+%% End of file `pdfcol-test1.tex'.
