@@ -1,0 +1,23 @@
+%% This is file `embedfile-test3.lvt',
+%% The original source files were:
+%%
+%% embedfile.dtx  (with options: `test3')
+\input{regression-test}
+\RequirePackage{ifluatex}
+\ifluatex
+ \pdfvariable compresslevel 0
+\else
+ \pdfcompresslevel 0
+\fi
+\NeedsTeXFormat{LaTeX2e}
+\let\SavedJobname\jobname
+\def\jobname{embedfile}
+\RequirePackage{dtx-attach}[2016/05/15]
+\let\jobname\SavedJobname
+\documentclass{minimal}
+\begin{document}
+  Test (\LaTeX): \texttt{embedfile.dtx} should be embedded.%
+\end{document}
+\endinput
+%%
+%% End of file `embedfile-test3.tex'.

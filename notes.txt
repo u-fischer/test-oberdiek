@@ -21,3 +21,9 @@ bitset-test3 removed: undefines etex commands (and fails on \ifcsname)
 pdfescape -> see l3str-convert, lua code??
  pdfescape-test4 removed (without etex test)
  pdfescape-test6: luatex errors because of missing catcode table, should work when pdftexcmds is updated.
+
+bigintcalc: expl3??
+bigintcalc-test3 removed (no etex)
+
+embedfile: test2 fails with xetex, but I don't want a config-plain-noxetex.
+           test4 fails with xetex, but I don't want a config-plain-noxetex.

@@ -1,42 +1,20 @@
-%%
-%% This is file `gettitlestring-test1.tex',
-%% generated with the docstrip utility.
-%%
+%% This is file `epstopdf-test1.lvt',
 %% The original source files were:
 %%
-%% gettitlestring.dtx  (with options: `test1')
-%% 
-%% This is a generated file.
-%% 
-%% Project: gettitlestring
-%% Version: 2016/05/16 v1.5
-%% 
-%% Copyright (C) 2009, 2010 by
-%%    Heiko Oberdiek <heiko.oberdiek at googlemail.com>
-%% 
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either
-%% version 1.3c of this license or (at your option) any later
-%% version. This version of this license is in
-%%    http://www.latex-project.org/lppl/lppl-1-3c.txt
-%% and the latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of
-%% LaTeX version 2005/12/01 or later.
-%% 
-%% This work has the LPPL maintenance status "maintained".
-%% 
-%% This Current Maintainer of this work is Heiko Oberdiek.
-%% 
-%% The Base Interpreter refers to any `TeX-Format',
-%% because some files are installed in TDS:tex/generic//.
-%% 
-%% This work consists of the main source file gettitlestring.dtx
-%% and the derived files
-%%    gettitlestring.sty, gettitlestring.pdf, gettitlestring.ins,
-%%    gettitlestring.drv, gettitlestring-test1.tex,
-%%    gettitlestring-test2.tex.
-%% 
+%% epstopdf.dtx  (with options: `test1')
+\input regression-test
+\input miniltx.tex\relax
+\ifcsname directlua\endcsname 
+ \input ltluatex
+ \def\Gin@driver{luatex.def}
+\else 
+ \ifcsname XeTeXrevision\endcsname  
+ \else  
+ \def\Gin@driver{pdftex.def}
+ \fi
+\fi
+\input graphicx.sty\relax
+\resetatcatcode
 \catcode`\{=1 %
 \catcode`\}=2 %
 \catcode`\#=6 %
@@ -106,7 +84,7 @@
 }
 \def\space{ }
 \expandafter\ifx\csname LoadCommand\endcsname\relax
-  \def\LoadCommand{\input gettitlestring.sty\relax}%
+  \def\LoadCommand{\input epstopdf.sty\relax}%
 \fi
 \def\Test{%
   \RangeCatcodeInvalid{0}{47}%
@@ -131,9 +109,10 @@
   \RangeCatcodeCheck{123}{255}{15}%
   \RestoreCatcodes
 }
+\START
 \Test
 \csname @@end\endcsname
 \end
 \endinput
 %%
-%% End of file `gettitlestring-test1.tex'.
+%% End of file `epstopdf-test1.tex'.
