@@ -10,7 +10,6 @@
   \usepackage{filecontents}%
   \usepackage{qstest}%
   \usepackage{pdftexcmds}%
-\START  
   \makeatletter
   \def\RestoreCatcodes{}%
   \count@=0 %
@@ -193,7 +192,7 @@
 \@input{askinclude-c.aux}
 \@EndChecks
 \end{filecontents*}
-\begin{document}
+\begin{document}\START
 \CheckInclude{a}{true}
 \CheckInclude{b}{true}
 \CheckInclude{c}{true}
