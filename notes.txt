@@ -1,4 +1,6 @@
-luatex obsolete?
+many packages/tests would works also in plain, but most tests are done only with latex
+
+luatex obsolete? (01.11.2018, docu changed, no luacolor)
 thepdfnumber -> expl3
 magicnum?
 
@@ -12,3 +14,8 @@ intcalc-test3: removed, undefines \numexpr
 pdfrender: interesting,
            luatex85?
            luatex \pdfmatch?
+
+bitset: candidate for expl3? (useful for pdf)
+bitset-test3 removed: undefines etex commands (and fails on \ifcsname)
+
+pdfescape -> see l3str-convert, lua code??

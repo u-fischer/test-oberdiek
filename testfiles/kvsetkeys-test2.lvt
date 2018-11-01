@@ -21,9 +21,9 @@
   \newcount\TestTime
   \SummaryTime=\z@
   \newcommand*{\PrintTime}[2]{%
-    \typeout{%
-      [Time #1: \strip@pt\dimexpr\number#2sp\relax\space s]%
-    }%
+    %\typeout{%
+    %  [Time #1: \strip@pt\dimexpr\number#2sp\relax\space s]%
+    %}%
   }%
   \newcommand*{\StartTime}[1]{%
     \renewcommand*{\TimeDescription}{#1}%
