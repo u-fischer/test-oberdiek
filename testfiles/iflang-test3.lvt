@@ -1,0 +1,83 @@
+%% This is file `iflang-test3.lvt',
+%% The original source files were:
+%%
+%% iflang.dtx  (with options: `test3')
+\input{regression-test}
+\NeedsTeXFormat{LaTeX2e}
+\let\pdfstrcmp\relax
+\nofiles
+\documentclass{minimal}
+\usepackage{qstest}
+\IncludeTests{*}
+\LogTests{log}{*}{*}
+\usepackage[english,naustrian,ngerman]{babel}
+\usepackage{iflang}
+\begin{document}\START
+\begin{qstest}{IfLanguagePatterns}{language, pattern}
+  \def\test#1#2{%
+    \Expect*{\IfLanguagePatterns{#1}{true}{false}}{#2}%
+  }%
+  \test{ngerman}{true}%
+  \test{naustrian}{true}%
+  \test{english}{false}%
+  \test{foobar}{false}%
+\end{qstest}
+\begin{qstest}{IfLanguageName}{language, name}
+  \def\test#1#2{%
+    \Expect*{\IfLanguageName{#1}{true}{false}}{#2}%
+  }%
+  \test{ngerman}{true}%
+  \test{naustrian}{false}%
+  \selectlanguage{naustrian}%
+  \test{ngerman}{false}%
+  \test{naustrian}{true}%
+  \test{foobar}{false}%
+  %
+  \def\languagename{naustrian}%
+  \test{naustrian}{true}%
+  \test{ngerman}{false}%
+  %
+  \edef\languagename{\string naustrian}%
+  \test{naustrian}{true}%
+  \test{ngerman}{false}%
+  %
+  \def\languagename{naustrian}%
+  \makeatletter
+  \@onelevel@sanitize\languagename
+  \test{naustrian}{true}%
+  \test{ngerman}{false}%
+  %
+  \def\languagename{naustrian}%
+  \def\xaustrian{naustrian}%
+  \def\xgerman{ngerman}%
+  \test{\xaustrian}{true}%
+  \test{\xgerman}{false}%
+  %
+  \def\languagename{\xaustrian}%
+  \test{naustrian}{true}%
+  \test{ngerman}{false}%
+  \test{\xaustrian}{true}%
+  \test{\xgerman}{false}%
+  \test{\languagename}{true}%
+  \test{\languagename\space}{false}%
+  %
+  \def\languagename{\empty\xaustrian\empty}%
+  \test{naustrian}{true}%
+  \test{ngerman}{false}%
+  \test{\empty\xaustrian\empty}{true}%
+  \test{\empty\xgerman\empty}{false}%
+\end{qstest}
+\begin{qstest}{IfDefined}{defined}
+  \makeatletter
+  \let\foobar\relax
+  \Expect*{\IfLang@IfDefined{foobar}{true}{false}}{false}%
+  \Expect*{\ifx\foobar\relax true\else false\fi}{true}%
+  \let\foobar\UNDEFINED
+  \Expect*{\IfLang@IfDefined{foobar}{true}{false}}{false}%
+  \Expect*{\ifx\foobar\relax true\else false\fi}{false}%
+  \Expect*{\ifx\foobar\UNDEFINED true\else false\fi}{true}%
+\end{qstest}
+\end{document}
+\endinput
+%%
+%% End of file `iflang-test3.tex'.

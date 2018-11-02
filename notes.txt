@@ -27,3 +27,9 @@ bigintcalc-test3 removed (no etex)
 
 embedfile: test2 fails with xetex, but I don't want a config-plain-noxetex.
            test4 fails with xetex, but I don't want a config-plain-noxetex.
+
+grfext -> graphicx??
+
+iflang -> babel??
+iflang-test4 removed (etex)
+iflang-test5 removed (vanilla tex)
