@@ -274,7 +274,7 @@ File: pgfmodulematrix.code.tex ....-..-..  (rcs-revision 1.8)
 \pgf@matrix@numberofcolumns=\count...
 )
 \tikz@expandcount=\count...
-(d:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex ....-..-.. v....1a (rcs-revision 1.2)
 )))
