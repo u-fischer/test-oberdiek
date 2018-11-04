@@ -8,10 +8,15 @@
  \pdfvariable compresslevel 0
 \else
  \pdfcompresslevel 0
-\fi
+ \fi
+%\def\pdffilemoddate#1{} ???
 \NeedsTeXFormat{LaTeX2e}
 \let\SavedJobname\jobname
 \def\jobname{embedfile}
+\RequirePackage{embedfile}
+\makeatletter
+\def\pdf@filemoddate#1{}
+\makeatother
 \RequirePackage{dtx-attach}[2016/05/15]
 \let\jobname\SavedJobname
 \documentclass{minimal}

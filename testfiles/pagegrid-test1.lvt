@@ -98,6 +98,7 @@
   \RangeCatcodeCheck{123}{255}{15}%
   \RestoreCatcodes
 }
+\RequirePackage{tikz}
 \START
 \Test
 \csname @@end\endcsname

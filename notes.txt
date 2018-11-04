@@ -33,3 +33,29 @@ grfext -> graphicx??
 iflang -> babel??
 iflang-test4 removed (etex)
 iflang-test5 removed (vanilla tex)
+
+
+03.11.2018 David:
+
+$ find . -name \*diff
+./build/test/hycolor-test1.luatex.diff
+./build/test/hycolor-test1.pdftex.diff
+./build/test/hycolor-test1.xetex.diff
+./build/test-config-noxetex/embedfile-test3.luatex.pdf.diff
+./build/test-config-noxetex/embedfile-test3.pdftex.pdf.diff
+./build/test-config-noxetex/pdfcolparallel-test1.luatex.pdf.diff
+./build/test-config-noxetex/pdfcolparallel-test1.pdftex.pdf.diff
+./build/test-config-pdftex/pagegrid-test1.pdftex.diff
+./build/test-config-pdftex/selinput-test1.pdftex.diff
+./build/test-config-pdftex/selinput-test2.pdftex.diff
+./build/test-config-pdftex/selinput-test5.pdftex.diff
+./build/test-config-pdftex/soulutf8-test2.pdftex.diff
+./build/test-config-pdftex/soulutf8-test3.pdftex.diff
+
+
+@UlrikeFischer the hycolor ones are all spaces before ( the
+selinput ones are because I have a newer utf8enc.dfu it's tempting
+to add some \OMIT\TIMO but as the test is testing encoding switches
+it's not so clear what can be omitted) and the pdf ones seem to
+have different timezone information, are we missing some of the
+EPOCH setting flags?
