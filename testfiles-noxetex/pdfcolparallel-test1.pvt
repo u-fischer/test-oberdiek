@@ -5,12 +5,6 @@
 %% pdfcolparallel.dtx  (with options: `test1')
 
 \input{regression-test}
-\RequirePackage{ifluatex}
-\ifluatex
- \pdfvariable compresslevel 0
-\else
- \pdfcompresslevel 0
-\fi
 \documentclass{article}
 \usepackage{xcolor}
 \usepackage{pdfcolparallel}[2016/05/16]
