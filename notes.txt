@@ -59,3 +59,30 @@ to add some \OMIT\TIMO but as the test is testing encoding switches
 it's not so clear what can be omitted) and the pdf ones seem to
 have different timezone information, are we missing some of the
 EPOCH setting flags?
+
+05.11.2018
+white space before (zzz.aux)
+./build/test/hycolor-test1.luatex.diff
+./build/test/hycolor-test1.xetex.diff
+./build/test/hycolor-test2.luatex.diff
+./build/test/hycolor-test2.xetex.diff
+./build/test/hycolor-test3.luatex.diff
+./build/test/hycolor-test3.xetex.diff
+
+%should be okay now with LR ending:
+file different length (line
+endings?) so diffs everywhere
+./build/test-config-noxetex/embedfile-test3.luatex.pdf.diff
+./build/test-config-noxetex/embedfile-test3.pdftex.pdf.diff
+
+extra utf8 (probably my setup) + defining Unicode char U+0237
+(decimal 567) + defining Unicode char U+02D9 (decimal 729) +
+defining Unicode char U+02DB (decimal 731)
+
+./build/test-config-pdftex/selinput-test1.pdftex.diff
+./build/test-config-pdftex/selinput-test2.pdftex.diff
+./build/test-config-pdftex/selinput-test5.pdftex.diff
+
+white space before [6], [9 [12]
+./build/test-config-pdftex/soulutf8-test2.pdftex.diff
+./build/test-config-pdftex/soulutf8-test3.pdftex.diff
