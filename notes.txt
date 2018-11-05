@@ -34,6 +34,8 @@ iflang -> babel??
 iflang-test4 removed (etex)
 iflang-test5 removed (vanilla tex)
 
+grffile real test files needed??
+https://github.com/ho-tex/oberdiek/issues/31
 
 03.11.2018 David:
 
