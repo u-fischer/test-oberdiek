@@ -36,28 +36,28 @@ iflang-test5 removed (vanilla tex)
 grffile real test files needed??
 https://github.com/ho-tex/oberdiek/issues/31
 
-askinclude: test24 only with pdftex?
-            test18 failed?
-
+Failures:
+=========
 luatex test4 fails
-       should luatex be tested at all??  
 
-03.11.2018 David:
+pdfcol-test1: invalid char
+pdfcol-test2: run with latex instead of pdflatex?
 
-$ find . -name \*diff
-./build/test/hycolor-test1.luatex.diff
-./build/test/hycolor-test1.pdftex.diff
-./build/test/hycolor-test1.xetex.diff
-./build/test-config-noxetex/embedfile-test3.luatex.pdf.diff
-./build/test-config-noxetex/embedfile-test3.pdftex.pdf.diff
-./build/test-config-noxetex/pdfcolparallel-test1.luatex.pdf.diff
-./build/test-config-noxetex/pdfcolparallel-test1.pdftex.pdf.diff
-./build/test-config-pdftex/pagegrid-test1.pdftex.diff
-./build/test-config-pdftex/selinput-test1.pdftex.diff
-./build/test-config-pdftex/selinput-test2.pdftex.diff
-./build/test-config-pdftex/selinput-test5.pdftex.diff
-./build/test-config-pdftex/soulutf8-test2.pdftex.diff
-./build/test-config-pdftex/soulutf8-test3.pdftex.diff
+atbegshi-test1: catcode issues?
+
+resizegather-test1: lualatex fails because of _ in luatex.def
+
+zref-test-runs: looks simply wrong, \ExpectRuns is not defined.
+
+Unclear:
+========
+atbegshi-test3: "test skipped" because of undefined @EveryShipout@Init
+hologo-test-list: 60 pages of logo. Not really possible to get log or pdf test from it.
+luacolor-test2: has probably been used with some \def\driver{...} call.
+                But doesn't work anymore with luatex due to \pdfoutput
+
+pdflscape-test3: test with driver dvipdfm
+pdflscape-test4: test with driver dvipsone
 
 
 @UlrikeFischer the hycolor ones are all spaces before ( the
@@ -76,11 +76,6 @@ white space before (zzz.aux)
 ./build/test/hycolor-test3.luatex.diff
 ./build/test/hycolor-test3.xetex.diff
 
-%should be okay now with LR ending:
-file different length (line
-endings?) so diffs everywhere
-./build/test-config-noxetex/embedfile-test3.luatex.pdf.diff
-./build/test-config-noxetex/embedfile-test3.pdftex.pdf.diff
 
 extra utf8 (probably my setup) + defining Unicode char U+0237
 (decimal 567) + defining Unicode char U+02D9 (decimal 729) +
