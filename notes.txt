@@ -39,6 +39,8 @@ https://github.com/ho-tex/oberdiek/issues/31
 askinclude: test24 only with pdftex?
             test18 failed?
 
+luatex test4 fails
+       should luatex be tested at all??  
 
 03.11.2018 David:
 

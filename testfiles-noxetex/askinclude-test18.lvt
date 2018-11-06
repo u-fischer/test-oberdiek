@@ -4,7 +4,7 @@
 %%
 %% askinclude.dtx  (with options: `test0,test18')
 \input{regression-test}
-\includeonly{askinclude-b}
+\includeonly{askinclude-b18}
 \ifx\CompatibilityMode Y%
   \documentstyle[filecontents,qstest,askinclude,pdftexcmds]{book}%
 \else
