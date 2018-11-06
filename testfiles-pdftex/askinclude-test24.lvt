@@ -140,6 +140,7 @@
     }%
   }%
 |endgroup
+\RequirePackage{kvsetkeys}[2007/09/29]%
 \START
 \Stack{{pdfmatch}{.,!askinclude-b24}}
 \CheckAnswer{.,!askinclude-b24}

@@ -45,17 +45,9 @@ Which files do you want to include?
      [-]         no files
      [?]         ask for each file
 \answer=.,!askinclude-b24
-(../kvsetkeys.sty
-Package: kvsetkeys ....-..-.. v... Key value parser (HO)
-(../etexcmds.sty
-Package: etexcmds ....-..-.. v... Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)) [1
+[1
 ]
-(askinclude-a24.tex [2
+ (askinclude-a24.tex [2
 ]
 Chapter 1.
 ) [3]
