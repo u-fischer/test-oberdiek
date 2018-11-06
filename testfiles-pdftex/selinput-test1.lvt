@@ -10,7 +10,9 @@
 \makeatletter
 \let\BeginDocumentText\@empty
 \def\TestEncoding#1#2{%
+  \OMIT
   \SelectInputMappings{#2}%
+  \TIMO
   \Expect*{\SIE@Encoding}{#1}%
   \Expect*{\inputencodingname}{#1}%
   \g@addto@macro\BeginDocumentText{%
