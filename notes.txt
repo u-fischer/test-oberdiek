@@ -43,21 +43,21 @@ pdfcol-test2
 
 Failures:
 =========
-luatex test4 fails (allocation number wrong)
+luatex test4 (allocation number wrong)
 
-catcode issues:
- pdfcol-test1: invalid char
- atbegshi-test1: catcode issues?
- resizegather-test1: lualatex fails because of _ in luatex.def
+catcode loading issues:
+ pdfcol-test1
+ atbegshi-test1
+ resizegather-test1  (only lualatex because of _ in luatex.def)
 
 zref-test-runs: looks simply wrong, \ExpectRuns is not defined.
 
 Unclear:
 ========
-atbegshi-test3: "test skipped" because of undefined @EveryShipout@Init
+atbegshi-test3:   noop? "test skipped" because of undefined @EveryShipout@Init
 hologo-test-list: 60 pages of logo. Not really possible to get log or pdf test from it.
-luacolor-test2: has probably been used with some \def\driver{...} call.
-                But doesn't work anymore with luatex due to \pdfoutput
+luacolor-test2:   has probably been used with some \def\driver{...} call.
+                  But doesn't work anymore with luatex due to \pdfoutput
 
 
 
