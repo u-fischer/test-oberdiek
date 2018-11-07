@@ -36,16 +36,19 @@ iflang-test5 removed (vanilla tex)
 grffile real test files needed??
 https://github.com/ho-tex/oberdiek/issues/31
 
+% forced pdfoutput=0 for these tests:
+pdflscape-test3: test with driver dvipdfm
+pdflscape-test4: test with driver dvipsone
+pdfcol-test2
+
 Failures:
 =========
-luatex test4 fails
+luatex test4 fails (allocation number wrong)
 
-pdfcol-test1: invalid char
-pdfcol-test2: run with latex instead of pdflatex?
-
-atbegshi-test1: catcode issues?
-
-resizegather-test1: lualatex fails because of _ in luatex.def
+catcode issues:
+ pdfcol-test1: invalid char
+ atbegshi-test1: catcode issues?
+ resizegather-test1: lualatex fails because of _ in luatex.def
 
 zref-test-runs: looks simply wrong, \ExpectRuns is not defined.
 
@@ -56,8 +59,7 @@ hologo-test-list: 60 pages of logo. Not really possible to get log or pdf test f
 luacolor-test2: has probably been used with some \def\driver{...} call.
                 But doesn't work anymore with luatex due to \pdfoutput
 
-pdflscape-test3: test with driver dvipdfm
-pdflscape-test4: test with driver dvipsone
+
 
 
 @UlrikeFischer the hycolor ones are all spaces before ( the
