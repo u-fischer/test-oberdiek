@@ -1,3 +1,4 @@
+\input{regression-test}
 \documentclass[]{article}
 \def\thepage{E\arabic{page}}
 \usepackage{color,graphicx}
@@ -5,7 +6,7 @@
 \usepackage{xspace}
 \usepackage{makeidx}
 \usepackage{amsmath}
-\usepackage[pdflinkmargin=5pt,pdfstartview={FitBH -32768},pdfpagemode=None,plainpages=false]{hyperref}
+\usepackage[pdflinkmargin=5pt,pdfstartview={FitBH -32768},pdfpagemode=UseNone,plainpages=false]{hyperref}
 %\usepackage[screen,article]{pdfscreen}
 \hypersetup{pdfauthor=?`\c C\"asar M\"uller n\~ao!`}
 \setcounter{tocdepth}{4}
@@ -14,6 +15,7 @@
 \hypersetup{pdftitle=Welcome to the Monkey House}
 \newcommand{\ANS}{\textsf{ANSYS}\xspace}
 \begin{document}
+\START
 \tableofcontents
 \section*{Abstract}
 \addtocontents{toc}{\protect\addvspace{10pt}}
@@ -77,7 +79,7 @@ Rotated -50 \includegraphics[scale=0.5,angle=-50]{hog}
 
 \item Jump to an external: The jump
 \href{file:test7#TestTarget}{target} should open test7.pdf on
-page 2, 
+page 2,
 \item  Jump to an external: The jump
 \href{file:test7#page.1}{page 1} should open test7.pdf on
 page 1.
