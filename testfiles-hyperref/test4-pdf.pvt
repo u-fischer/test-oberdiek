@@ -1,9 +1,9 @@
+\input{regression-test}
 \documentclass{article}
 \usepackage{hyperref}
 
-
 \begin{document}
-
+\START
 \section{My section title}
 \include{bit}
 \include{bit}

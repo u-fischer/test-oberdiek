@@ -124,3 +124,6 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+!testfiles*/support/*
+
