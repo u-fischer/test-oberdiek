@@ -1,5 +1,6 @@
+\input{regression-test}
 \documentclass{article}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage[spanish]{babel}
@@ -16,7 +17,7 @@
 \setlength{\oddsidemargin}{-5mm}
 \setlength{\evensidemargin}{-5mm}
 \setlength{\textwidth}{165mm}
-\addtolength{\textheight}{3.5cm} % alargar longitud p·gina
+\addtolength{\textheight}{3.5cm} % alargar longitud p√°gina
 
 \hypersetup{%
   pdftitle={Notas sobre Control por computador, de Hilario Lopez},%
@@ -47,7 +48,7 @@
 
 \newcommand{\ojo}[1]{ }
 %
-% Crear una caja de texto con borde para destacar ciertos p·rrafos
+% Crear una caja de texto con borde para destacar ciertos p√°rrafos
 %
 \newcommand{\destacaP}[1]{ }
 
@@ -55,51 +56,51 @@
 %
 \begin{document}
 
-\section{DiseÒo mediante sÌntesis directa}
-Se calculan reguladores por el mÈtodo de Truxal.
+\section{Dise√±o mediante s√≠ntesis directa}
+Se calculan reguladores por el m√©todo de Truxal.
 \begin{itemize}
   \item Si el proceso tiene un tiempo muerto $d$, el sistema en cadena cerrada no puede
   tener un valor menor.
 \begin{equation}\label{eq:SintesisDirectaGradosEnBucleCerrado}
   gr[L(z)] -gr[N(z)] \ge gr[A(z)]-gr[B(z)] \tag{2.14}
 \end{equation}
-  \item Se obtendr· el mismo tiempo muerto  $d$, salvo que en el regulador $G_R$ se
-  introduzca un nuevo retardo por tener m·s ceros que polos.
+  \item Se obtendr√° el mismo tiempo muerto  $d$, salvo que en el regulador $G_R$ se
+  introduzca un nuevo retardo por tener m√°s ceros que polos.
   \item Los polos y ceros del proceso externos a la circunferencia unidad no se deben
   cancelar con los ceros y polos del regulador, por lo que dichos factores no pueden
   aparecer en $G_R(z)$.
-  \item AsignaciÛn de polos (del sistema en cadena cerrada).
+  \item Asignaci√≥n de polos (del sistema en cadena cerrada).
   Permite especificar (en parte\footnote{Es debido a que los ceros que resulten del regulador
-  pueden modificar la din·mica que hemos calculado mediante los polos. Habr· que comprobar que
+  pueden modificar la din√°mica que hemos calculado mediante los polos. Habr√° que comprobar que
   su efecto es despreciable, que implica que los ceros deben ser poco significativos
-  en comparaciÛn con las raÌces de $z^2+ \alpha \, z + \beta = 0$} (interesa por tanto que
-  estÈn alejados de la circunferencia unidad).) la respuesta transitoria, a
-  travÈs de un sistema de segundo orden, y poniendo el resto de los polos en $z=0$.
-  \item Tiempo finito. Todos sus polos est·n en el origen. Se caracterizan porque alcanzan
+  en comparaci√≥n con las ra√≠ces de $z^2+ \alpha \, z + \beta = 0$} (interesa por tanto que
+  est√©n alejados de la circunferencia unidad).) la respuesta transitoria, a
+  trav√©s de un sistema de segundo orden, y poniendo el resto de los polos en $z=0$.
+  \item Tiempo finito. Todos sus polos est√°n en el origen. Se caracterizan porque alcanzan
   el valor final de la respuesta ante una entrada dada en un tiempo finito,
   \textsc{sin oscilar la secuencia discreta}. En el caso de control en tiempo real, el
-  sistema continuo si oscilarÌa ligeramente. Se refiere a que aunque en los instantes de
+  sistema continuo si oscilar√≠a ligeramente. Se refiere a que aunque en los instantes de
   muestreo los valores sean los dados por el sistema discreto, el sistema continuo
-  asociado podrÌa tomar valores distintos entre los instantes de muestreo.
-  \item Tiempo mÌnimo. Como los de tiempo finito, pero realizando \textsc{todas}
+  asociado podr√≠a tomar valores distintos entre los instantes de muestreo.
+  \item Tiempo m√≠nimo. Como los de tiempo finito, pero realizando \textsc{todas}
   las cancelaciones \textsc{posibles} (no se consideran posibles las de polos y ceros externos).
-  \item Respuesta en permanente. Si se desea obtener error de posiciÛn nulo y el proceso
+  \item Respuesta en permanente. Si se desea obtener error de posici√≥n nulo y el proceso
   no posee un polo en $z=1$, entonces el regulador debe incluir un polo (por lo menos) en
-  dicho punto. TambiÈn es necesario esto para eliminar el efecto sobre el permanente de
+  dicho punto. Tambi√©n es necesario esto para eliminar el efecto sobre el permanente de
   las perturbaciones deterministas.
-  \item Simplicidad. Interesa que el n˙mero de polos y ceros del regulador sea mÌnimo.
-  Esta propiedad es opuesta a la minimizaciÛn de $m$ (para obtener un sistema de tiempo mÌnimo).
+  \item Simplicidad. Interesa que el n√∫mero de polos y ceros del regulador sea m√≠nimo.
+  Esta propiedad es opuesta a la minimizaci√≥n de $m$ (para obtener un sistema de tiempo m√≠nimo).
 \end{itemize}
-\subsection{MÈtodos de c·lculo}
-\subsubsection{MÈtodo de asignaciÛn de polos} El transitorio puede venir especificado por
-$M_p$, $n_p$, y $n_s$. Las fÛrmulas aplicables son
+\subsection{M√©todos de c√°lculo}
+\subsubsection{M√©todo de asignaci√≥n de polos} El transitorio puede venir especificado por
+$M_p$, $n_p$, y $n_s$. Las f√≥rmulas aplicables son
 \begin{align}\label{eq:AsignacionPolosFormulasParametrosTransitorio}
  n_p &= \frac{\pi}{\theta}        \tag{2.27} \\
  M_p &= |p|^{n_p}                 \tag{2.28} \\
  n_s &=  \frac{\pi}{\sigma}       \tag{2.29} \\
  |p| &= e^{-\sigma}               \tag{2.30}
 \end{align}
-La ecuaciÛn caracterÌstica para realimentaciÛn unitaria ($H=1$) es
+La ecuaci√≥n caracter√≠stica para realimentaci√≥n unitaria ($H=1$) es
 \begin{equation}\label{eq:AsignacionPolosEcuacionCaracteristica}
   1 + G_R(z) \, BG(z) = 0 \tag{2.32}
 \end{equation}
@@ -108,107 +109,107 @@ o sea
   1 + \frac{Q(z)}{P(z)} \, \frac{B(z)}{A(z)}  = 0 \tag{2.33}
 \end{equation}
 en la que se observa que puede haber factores que se anulen entre numerador de $G_R$ y
-denominador de $G_P$, y viceversa. Operando, resultarÌa que
+denominador de $G_P$, y viceversa. Operando, resultar√≠a que
 \begin{equation}\label{eq:AsignacionPolosEcuacionCaracteristicaNumerador}
  A(z) \, P(z) + B(z) \, Q(z)  = 0 \tag{2.34}
 \end{equation}
 %
 Debe hacerse notar que si en la ec.
 (\ref{eq:AsignacionPolosEcuacionCaracteristicaFactorizada}) se hubiesen anulado factores
-entre numerador y denominador, la ecuaciÛn
-(\ref{eq:AsignacionPolosEcuacionCaracteristicaNumerador}) una vez simplificada serÌa del
+entre numerador y denominador, la ecuaci√≥n
+(\ref{eq:AsignacionPolosEcuacionCaracteristicaNumerador}) una vez simplificada ser√≠a del
 estilo
 \begin{equation}\label{eq:AsignacionPolosEcuacionCaracteristicaNumeradorSimplificada}
  A'(z) \, P'(z) + B'(z) \, Q'(z)  = 0 \tag{2.34-bis}
 \end{equation}
-en la que  $A'(z)$ serÌa los polos de $A(z)$ que no se cancelan, $B'(z)$ los ceros del
-proceso no cancelados (y que por tanto aparecer·n en la \fdt de cadena cerrada), y $P'(z)$
+en la que  $A'(z)$ ser√≠a los polos de $A(z)$ que no se cancelan, $B'(z)$ los ceros del
+proceso no cancelados (y que por tanto aparecer√°n en la \fdt de cadena cerrada), y $P'(z)$
 y $Q'(z)$ los polinomios que necesitamos calcular. El factor $Q'(z)$ no se deja como tal,
-sino que se pone en funciÛn del polinomio $N(z)$, que es el numerador de la \fdt de cadena
+sino que se pone en funci√≥n del polinomio $N(z)$, que es el numerador de la \fdt de cadena
 cerrada. Para ello se hace uso de la propiedad que dice que los ceros en cadena cerrada
-son los del sistema m·s los del regulador (a menos que se hayan cancelado ceros del
+son los del sistema m√°s los del regulador (a menos que se hayan cancelado ceros del
 proceso con polos del regulador).
 %
-La ecuaciÛn que debemos plantear para hallar los coeficientes del regulador es
+La ecuaci√≥n que debemos plantear para hallar los coeficientes del regulador es
 \begin{equation}\label{eq:AsignacionPolosIdentificacionCoeficientes}
   z^m (z^2+ \alpha \, z + \beta) = A(z) \, P(z) + B(z) \, Q(z) \tag{2.35}
 \end{equation}
 %
-La soluciÛn es ˙nica cuando se tengan tantas ecuaciones como incÛgnitas. Igualando grados,
+La soluci√≥n es √∫nica cuando se tengan tantas ecuaciones como inc√≥gnitas. Igualando grados,
 se tiene que
 \begin{equation}\label{eq:AsignacionPolosGradosPolinomios}
  m+2 = p+a \tag{2.36}
 \end{equation}
-y al aplicar la condiciÛn (\ref{eq:SintesisDirectaGradosEnBucleCerrado}) a la ecuaciÛn
+y al aplicar la condici√≥n (\ref{eq:SintesisDirectaGradosEnBucleCerrado}) a la ecuaci√≥n
 (\ref{eq:AsignacionPolosIdentificacionCoeficientes}) resulta
 \begin{equation}\label{AsignacionPolosCondicionGradosBucleCerrado}
   (m+2)-n \ge a-b \tag{2.38}
 \end{equation}
-\subsubsection{MÈtodo de tiempo finito}
-Todos los polos de cadena cerrada est·n en el origen ($z=0$). En dichos sistemas, la
-respuesta impulsional se puede obtener f·cilmente como la secuencia formada por los
+\subsubsection{M√©todo de tiempo finito}
+Todos los polos de cadena cerrada est√°n en el origen ($z=0$). En dichos sistemas, la
+respuesta impulsional se puede obtener f√°cilmente como la secuencia formada por los
 coeficientes de $\{b_0, b_1, b_2, \ldots \}$, que es la que resulta de multiplicar la \fdt
-por $z^{-m}$, siendo $m$ en n˙mero de polos en cadena cerrada (todos en el origen). La
-respuesta ante escalÛn se puede conseguir como suma de la secuencia impulsional:  $\{b_0,
+por $z^{-m}$, siendo $m$ en n√∫mero de polos en cadena cerrada (todos en el origen). La
+respuesta ante escal√≥n se puede conseguir como suma de la secuencia impulsional:  $\{b_0,
 b_0+b_1, b_0+b_1+b_2, \ldots \}$.
-\ojo{Para los reguladores de tiempo finito, el n˙mero de muestras en el origen (valor
-cero) coincide con el tiempo muerto, mientras que el n˙mero de muestras del transitorio
-coincide con el n˙mero de ceros. Revisar\pagina{H26} øPor que se consideran tres muestras
+\ojo{Para los reguladores de tiempo finito, el n√∫mero de muestras en el origen (valor
+cero) coincide con el tiempo muerto, mientras que el n√∫mero de muestras del transitorio
+coincide con el n√∫mero de ceros. Revisar\pagina{H26} ¬øPor que se consideran tres muestras
 de transitorio, y no se cuenta la del origen ni la que marca el fin del transitorio, si en
-un sistema continuo se contarÌa todo el tiempo?}
-\subsubsection{MÈtodo de tiempo mÌnimo}
+un sistema continuo se contar√≠a todo el tiempo?}
+\subsubsection{M√©todo de tiempo m√≠nimo}
 Se cancelan todos los polos y ceros de $BG(z)$ interiores a la circunferencia unidad.
-\subsection{Mejora del rÈgimen permanente}
+\subsection{Mejora del r√©gimen permanente}
 Para evitar errores en permanente, puede interesar poner una serie de polos en $z=1$, lo
-que se traduce en que en el denominador del regulador habr· un factor $(z-1)^i$, siendo
+que se traduce en que en el denominador del regulador habr√° un factor $(z-1)^i$, siendo
 $G_R$, por tanto, de la forma
 \begin{equation}\label{SintesisDirectaPolosEnZIgualAUno}
  G_R = \frac{Q(z)}{(z-1)^i \, P(z)} \tag{2.29}
 \end{equation}
-\subsection{Mejora del rÈgimen transitorio}
-Pueden conseguirse respuestas menos bruscas (menor sobreoscilaciÛn, etc.) dando m·s tiempo
+\subsection{Mejora del r√©gimen transitorio}
+Pueden conseguirse respuestas menos bruscas (menor sobreoscilaci√≥n, etc.) dando m√°s tiempo
 para que el sistema se estabilice, lo cual puede conseguirse aumentando $m$ en una unidad,
 mientras se mantiene fijo $T_m$, por lo que tendremos un grado de libertad. Otra
-posibilidad es poner un filtro entre la seÒal de consigna y la entrada al bucle de
-realimentaciÛn, de forma que Èste perciba una variaciÛn m·s lenta de la seÒal de consigna
+posibilidad es poner un filtro entre la se√±al de consigna y la entrada al bucle de
+realimentaci√≥n, de forma que √©ste perciba una variaci√≥n m√°s lenta de la se√±al de consigna
 \pagina{28}.
 \subsection{Notas acerca de los problemas propuestos}
 \begin{itemize}
-  \item Son interesantes los ejemplos para ver como se aplican en la pr·ctica las
+  \item Son interesantes los ejemplos para ver como se aplican en la pr√°ctica las
   ecuaciones del estilo a la (\ref{eq:AsignacionPolosIdentificacionCoeficientes}), sobre
-  todo al c·lculo de los valores del grado $n$ y a la aplicaciÛn correcta de la
-  ecuaciÛn (\ref{AsignacionPolosCondicionGradosBucleCerrado}).
-  \item Al incluir integrador en el regulador, la sobreoscilaciÛn tiende a aumentar\pagina{40}.
+  todo al c√°lculo de los valores del grado $n$ y a la aplicaci√≥n correcta de la
+  ecuaci√≥n (\ref{AsignacionPolosCondicionGradosBucleCerrado}).
+  \item Al incluir integrador en el regulador, la sobreoscilaci√≥n tiende a aumentar\pagina{40}.
   \item Se indica un ejemplo donde se permite incrementar $m$ para obtener el grado de
-  libertad que nos permita obtener menor sobreoscilaciÛn. TambiÈn se hace uso del
+  libertad que nos permita obtener menor sobreoscilaci√≥n. Tambi√©n se hace uso del
   ``truco'' de poner el denominador $z^m$ en la forma $((z-1) + 1)^m$, por lo que haciendo
   el desarrollo del binomio de Newton, nos permite poner la \fdt de cadena cerrada como
   factores de $(z-1)^k$ en vez de $z^k$, lo que permite simplificar a la hora de igualar
-  coeficientes, a la vez que garantizamos que no habr· error en permanente, ya que $M(1) =
+  coeficientes, a la vez que garantizamos que no habr√° error en permanente, ya que $M(1) =
   1$.
   Hay que andarse con ojo si el factor $K$ que multiplica al proceso no es 1 (estando dicho
   proceso expresado en la forma de factores $K \cdot \prod (z-c_i)/\prod (z-p_j)$).
-  En ese caso\pagina{45}, el factor $K$ aparecerÌa multiplicando al cociente de polinomios
-  que definen $M(z)$ y el coeficiente $n_0$ no serÌa 1, sino $1/K$. Un ejemplo de este
-  caso, si se intenta resolver de esta forma, est· en el examen del $1^{\textrm{er}}$ parcial
+  En ese caso\pagina{45}, el factor $K$ aparecer√≠a multiplicando al cociente de polinomios
+  que definen $M(z)$ y el coeficiente $n_0$ no ser√≠a 1, sino $1/K$. Un ejemplo de este
+  caso, si se intenta resolver de esta forma, est√° en el examen del $1^{\textrm{er}}$ parcial
   del 25 de Marzo de 1999.
 \end{itemize}
-\ojo{øEs cierto que si no se cancelan ceros del proceso, entonces se tiene que la seÒal de
-control $u(k)$ tambiÈn presenta un comportamiento de tiempo finito? øDe dÛnde se deduce
+\ojo{¬øEs cierto que si no se cancelan ceros del proceso, entonces se tiene que la se√±al de
+control $u(k)$ tambi√©n presenta un comportamiento de tiempo finito? ¬øDe d√≥nde se deduce
 dicha propiedad?}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Algoritmos de diseÒo (I)}
+\section{Algoritmos de dise√±o (I)}
 \subsection{Algoritmos de tiempo finito (reguladores de Isermann)}
 \begin{itemize}
-  \item La funciÛn de transferencia en cadena cerrada no es preespecificada, sino que
-  viene determinada como resultado del diseÒo. Todos los polos estar·n en el origen.
-  \item No se cancela ning˙n cero, pero sÌ todos los polos.
+  \item La funci√≥n de transferencia en cadena cerrada no es preespecificada, sino que
+  viene determinada como resultado del dise√±o. Todos los polos estar√°n en el origen.
+  \item No se cancela ning√∫n cero, pero s√≠ todos los polos.
   \item Se incluye integrador, que anula el error en permanente
   \item Son muy sencillos de calcular.
 \end{itemize}
 \subsection{Regulador de tiempo finito de orden normal}
-La seÒal de control $u$ estar· estabilizada tras $m$ periodos de muestreo, y la de salida
+La se√±al de control $u$ estar√° estabilizada tras $m$ periodos de muestreo, y la de salida
 $y$ tras $m+d$, siendo $d$ el tiempo muerto del proceso.
 \subsubsection{Para procesos con tiempo muerto %
   \texorpdfstring{$d=0$}{d=0}}
@@ -220,12 +221,12 @@ regulador son:
 %
 \begin{equation}\label{eq:IsermannTiempoFinitoOrdenNormalCoeficientesQi}
   q_i = q_0 \, a_i, \quad i=1,\ldots,m
-        \quad \textrm{(adem·s $\sum q_i = u(m)$, por (3.12, H53))}\tag{3.20b}
+        \quad \textrm{(adem√°s $\sum q_i = u(m)$, por (3.12, H53))}\tag{3.20b}
 \end{equation}
 %
 \begin{equation}\label{eq:IsermannTiempoFinitoOrdenNormalCoeficientesPi}
   p_i = q_0 \, b_i, \quad i=1,\ldots,m
-       \quad \textrm{(adem·s $\sum p_i = 1$, por (3.11))}\tag{3.20c}
+       \quad \textrm{(adem√°s $\sum p_i = 1$, por (3.11))}\tag{3.20c}
 \end{equation}
 %
 El regulador resultante ($d=0$) es
@@ -233,7 +234,7 @@ El regulador resultante ($d=0$) es
   G_R = \frac{Q(z^{-1}))}{1-P(z^{-1}))} =
   \frac{q_0 \, A(z^{-1})}{1-q_0 \, B(z^{-1})} \tag{3.21}
 \end{equation}
-El primer valor de la acciÛn de control es
+El primer valor de la acci√≥n de control es
 \begin{equation}\label{eq:IsermannTiempoFinitoOrdenNormalUCero}
   u(0) = q_0 = \frac{1}{\sum b_i} \tag{3.22}
 \end{equation}

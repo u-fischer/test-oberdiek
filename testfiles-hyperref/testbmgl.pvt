@@ -1,4 +1,4 @@
-% testbmgl.tex
+% testbmgl.pvt
 %
 % Function:
 % * How display a pdf reader the bookmarks?
@@ -28,6 +28,7 @@
 % Please send error reports and suggestions for improvements to
 %   Heiko Oberdiek <heiko.oberdiek at googlemail.com>.
 %
+\input{regression-test}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{testbmgl.tex}[2008/09/11 v1.3 Test bookmark glyphs (HO)]
 \documentclass[12pt,a4paper]{article}
