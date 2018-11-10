@@ -269,19 +269,19 @@ Package hyperref Info: bookmark on input line ...:
 (hyperref)             type {toc}.
 Package hyperref Info: Anchor `test.test1' on input line ....
 Package hyperref Info: Reference (link) `testpiccy' on input line ....
-<picture.pdf, id=207, 36.135pt x 34.1275pt>
-File: picture.pdf Graphic file (type pdf)
-<use picture.pdf>
-Package luatex.def Info: picture.pdf  used on input line ....
-(luatex.def)             Requested size: 76.52638pt x 72.26999pt.
-File: picture.pdf Graphic file (type pdf)
-<use picture.pdf>
-Package luatex.def Info: picture.pdf  used on input line ....
-(luatex.def)             Requested size: 76.52638pt x 72.26999pt.
+<picture.png, id=207, 170.67764pt x 223.7961pt>
+File: picture.png Graphic file (type png)
+<use picture.png>
+Package luatex.def Info: picture.png  used on input line ....
+(luatex.def)             Requested size: 55.11798pt x 72.26999pt.
+File: picture.png Graphic file (type png)
+<use picture.png>
+Package luatex.def Info: picture.png  used on input line ....
+(luatex.def)             Requested size: 55.11798pt x 72.26999pt.
 Package hyperref Info: Anchor `page.16' on input line ....
  [10
 Package `hyperref' Info: End of reference (link) `testpiccy', line 116.
-<./picture.pdf>]
+<./picture.png>]
 Package hyperref Info: Anchor `section.25' on input line ....
 Package hyperref Info: bookmark on input line ...:
 (hyperref)             thecounter {2.4}

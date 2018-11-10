@@ -2,6 +2,8 @@
 
 test0 makeindex? function runtest_tasks ( name )
 test2, test3: no really sensible
+test-slide: need postscript.
+testfor2: dvips, needs web.sty
 
 ==== oberdiek =======
 many packages/tests would works also in plain, but most tests are done only with latex

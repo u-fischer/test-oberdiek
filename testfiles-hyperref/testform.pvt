@@ -1,5 +1,5 @@
 %\begin{Form}[action=http:www.rhbnc.ac.uk/htbin/shew-fields,html,method=post]
-
+\input{regression-test}
 \documentclass{article}
 \usepackage[bookmarks=false]{hyperref}
 \setlength{\parindent}{0pt}
@@ -34,16 +34,16 @@ Have you still got your:
       Pretend it never happened=Forget,
       Write a book about it=Write}
 
-%\TextField[password,name=made]{\emph{Who} made the ring? }
-\TextField[password,name=made]{Who made the ring? }
+\TextField[password,name=made]{\emph{Who} made the ring? }
+%\TextField[password,name=made]{Who made the ring? }
 
 \ChoiceMenu[combo,default=Bofur,name=whatdwarf,
      ]{Select funniest name, or add one}
      {Bofur,Thorin,Gollum,Smaug,Gandalf}
 
-%\PushButton[name=xxx,onclick={app.beep(0)}]{Make a horrid beep}
+\PushButton[name=xxx,onclick={app.beep(0)}]{Make a horrid beep}
 
-\Submit{Send} 
+\Submit{Send}
 \Reset{Clear}
 
 \end{Form}

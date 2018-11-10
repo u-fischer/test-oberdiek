@@ -1,3 +1,4 @@
+\input{regression-test}
 \nofiles
 \documentclass{article}
 \ifx\driver\UnDeFiNeD
