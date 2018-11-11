@@ -58,36 +58,36 @@ Name;Description;Tests;Useful?;Kernel code?;Moveto?;Comment
  makerobust; make a command robust;-;+?;yes;;xparse, etoolbox …
  pagegrid; prints a page grid in the background;0;+;;;
  pagesel; select pages of a document for output;-;+?;;;
- pdfcolfoot; using pdfTeX’s color stack for footnotes;;;;;
- pdfcol; macros for setting and maintaining new color stacks;;;;;
- pdfcolmk; pdfTeX COLour MarK — fake a pdfTeX colour stack using marks (not needed for pdfTeX 1.40.0 and later);;;;;
- pdfcolparallel; fixes colour problems in package parallel;;;;;
- pdfcolparcolumns; fixes colour problems in package parcolumns;;;;;
- pdfcrypt; setting PDF encryption;;;;;
- pdfescape; pdfTeX’s escape features using TeX or e-TeX;;;;;
- pdflscape; landscape pages in PDF;;;;;
- pdfrender; control PDF rendering modes;;;;;
- pdftexcmds; provide pdfTeX primitives missing in LuaTeX;;;;;
- picture; dimens for picture macros;;;;;
- pmboxdraw; poor man’s box drawing characters;;;;;
- protecteddef; define a command that protected against expansion;;;;;
- refcount; using the numeric values of references;;;;;
- rerunfilecheck; checksum based rerun checks on auxiliary files;;;;;
- resizegather; automatically resize overly large equations;;;;;
- rotchiffre; performs simple rotation cyphers;;;;;
- scrindex; redefines environment ‘theindex’ of package ‘index’, if a class from KOMA-Script is loaded;;;;;
- selinput; select the input encoding by specifying pairs of input characters and their glyph names;;;;;
- setouterhbox; set \hbox in outer horizontal mode;;;;;
- settobox; getting box sizes;;;;;
- soulutf8; extends package soul and adds some support for UTF-8;;;;;
- stackrel; extensions of the \stackrel command;;;;;
- stampinclude; selects the files for \include by inspecting the timestamp of the .aux file(s);;;;;
- stringenc; provides \StringEncodingConvert for converting a string between different encodings;;;;;
- tabularht; tabulars with height specification;;;;;
- tabularkv; key value interface for tabular parameters;;;;;
- telprint; print German telephone numbers;;;;;
- thepdfnumber; canonical numbers for use in PDF files and elsewhere;;;;;
- transparent; using a color stack for transparency with pdftex;;;;;
- twoopt; commands with two optional arguments;;;;;
- uniquecounter; provides unlimited unique counter;;;;;
- zref; a proposed new reference system;;;;;
+ pdfcolfoot; using pdfTeX’s color stack for footnotes;0;;;;
+ pdfcol; macros for setting and maintaining new color stacks;-;;;;
+ pdfcolmk; pdfTeX COLour MarK — fake a pdfTeX colour stack using marks (not needed for pdfTeX 1.40.0 and later);-;;;;
+ pdfcolparallel; fixes colour problems in package parallel;0;;;;
+ pdfcolparcolumns; fixes colour problems in package parcolumns;0;;;;
+ pdfcrypt; setting PDF encryption;-;;;;
+ pdfescape; pdfTeX’s escape features using TeX or e-TeX;+;;;;
+ pdflscape; landscape pages in PDF;+;;;;
+ pdfrender; control PDF rendering modes;+;+;perhaps an interface;;
+ pdftexcmds; provide pdfTeX primitives missing in LuaTeX;+;;;;
+ picture; dimens for picture macros;-;;;;
+ pmboxdraw; poor man’s box drawing characters;0;;;;
+ protecteddef; define a command that protected against expansion;+;;;;
+ refcount; using the numeric values of references;+;;;;
+ rerunfilecheck; checksum based rerun checks on auxiliary files;0;;;;
+ resizegather; automatically resize overly large equations;0;;;;
+ rotchiffre; performs simple rotation cyphers;+;;;;
+ scrindex; redefines environment ‘theindex’ of package ‘index’, if a class from KOMA-Script is loaded;-;;;;
+ selinput; select the input encoding by specifying pairs of input characters and their glyph names;+;+?;no;;imho less useful in times of utf8
+ setouterhbox; set \hbox in outer horizontal mode;+;+?;;;only for dvips links?
+ settobox; getting box sizes;-;+?;perhaps;;
+ soulutf8; extends package soul and adds some support for UTF-8;+;+?;no;;
+ stackrel; extensions of the \stackrel command;-;?;;amsmath?;
+ stampinclude; selects the files for \include by inspecting the timestamp of the .aux file(s);-;?;?;;
+ stringenc; provides \StringEncodingConvert for converting a string between different encodings;+;++;yes (at least expl3);L3str-conv;check if l3str-conv contains everything.
+ tabularht; tabulars with height specification;-;?;?;;
+ tabularkv; key value interface for tabular parameters;-;-?;no;;
+ telprint; print German telephone numbers;-;+ (for german);no;;
+ thepdfnumber; canonical numbers for use in PDF files and elsewhere;+;+;probably;l3int?;
+ transparent; using a color stack for transparency with pdftex;-;++ (see comment);!YES!;l3draw?;managing should be done by the kernel, see https://github.com/ho-tex/oberdiek/issues/19
+ twoopt; commands with two optional arguments;-;-;;;Obsolete (xparse is better)
+ uniquecounter; provides unlimited unique counter;+;+?;;;
+ zref; a proposed new reference system;0;+++;long run yes;;
